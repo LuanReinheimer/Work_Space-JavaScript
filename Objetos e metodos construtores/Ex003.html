@@ -1,0 +1,68 @@
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+    
+    
+    function print(frase){
+        document.write(frase)
+        pulaLinha()
+    }
+
+
+// Crie um Array de objetos com nome e idade.
+
+
+
+var pessoas = [{
+    nome: 'luan',
+    idade: 23
+},
+{
+    nome: 'joao',
+    idade: 25
+},
+{
+    nome: 'paulo',
+    idade: 35
+}];
+
+
+function imprimePrimeiroNome(usuario){
+    return console.log(usuario[0].nome)
+    
+}
+
+function imprimeUltimoNome(usuario){
+    return console.log(usuario[usuario.length -1].nome)
+    
+}
+
+function imprimeChaves(usuario){
+    return console.log(Object.keys(usuario))
+}
+
+function imprimeValores(usuario){
+    return console.log(Object.values(usuario))
+}
+
+// imprimindo um objeto por vez do array.
+function imprimeUmPorUm(objetoArray){
+    for (var posisao in pessoas){
+        console.log(posisao, pessoas[posisao])
+    }
+}
+
+
+console.log(pessoas)
+console.log(imprimePrimeiroNome(pessoas))
+console.log(imprimeUltimoNome(pessoas))
+console.log(imprimeChaves(pessoas))
+console.log(imprimeValores(pessoas))
+console.log(imprimeUmPorUm(pessoas))
+
+
+
+</script>

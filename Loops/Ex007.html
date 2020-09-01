@@ -1,0 +1,36 @@
+
+<script>
+
+/*Como resolvemos isso?
+
+Isso está relacionado à existência das variáveis, a variável totalCalorias é local para for e, portanto, só podemos usá-la e é 
+redefinida para cada iteração. Se quisermos manter o valor fora de cada iteração, devemos fazer com que essa variável seja global para o for. 
+Conseguimos isso de maneira simples, declarando a variável totalCalorias fora do for.
+
+var totalCalorias = 0; 
+//Aqui eu aproveito e inicializo em 0 a variável totalCalorias.
+
+for(var i = 0; i < 5; i++) {
+  totalCalorias = totalCalorias + 0.25; 
+  //aqui a variável, como já está declarada fora do for, pode ser modificada durante as iterações e não irá "reiniciar"
+}
+
+console.log(totalCalorias) 
+//a variável totalCalorias já existe e retorna o valor total que estávamos procurando.
+Sabendo disso, escreva uma função somar5MoedasDe25Centavos, que adiciona o valor de 5 moedas de 0,25 centavos e retorna o resultado.
+
+Por exemplo:
+
+somar5MoedasDe25Centavos()
+1.25
+Isso fez 0.25+0.25+0.25+0.25+0.25 */
+
+function somar5MoedasDe25Centavos(){
+    var totalSomadoDeMoedas = 1 ;
+    for( var i = 0; i < 5; i++){
+        totalSomadoDeMoedas += 0.25;
+        return totalSomadoDeMoedas;
+    }
+}
+console.log(somar5MoedasDe25Centavos());
+</script>

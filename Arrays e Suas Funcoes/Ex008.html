@@ -1,0 +1,39 @@
+<script>
+/* Escreva a função “medalhaDeAcordoComPosto(numero)”, que recebe um número como parâmetro. Usando apenas o máximo de um “if” apenas. Talvez os arrays possam ser úteis aqui.
+
+Você tem que devolver a medalha que corresponde às primeiras posições de uma competição:
+
+ medalhaDeAcordoComPosto (1)
+"ouro"
+ medalhaDeAcordoComPosto (2)
+"prata"
+ medalhaDeAcordoComPosto (3)
+"bronze"
+medalhaDeAcordoComPosto (4)
+"nada"
+ medalhaDeAcordoComPosto (5)
+"nada"*/
+
+
+//var items = ["ouro", "prata", "bronze"];
+
+//function medalhaDeAcordoComPosto(numero){
+    //if(numero >= items.length +1){
+       // return "nada";
+    //}else{
+     //  return items[numero -1];
+    //}
+//}
+
+var items = ["ouro", "prata", "bronze", "nada", "nada"]
+
+function medalhaDeAcordoComPosto(numero){
+    return items[numero -1];
+}
+
+console.log(medalhaDeAcordoComPosto(2));
+
+
+
+
+</script>

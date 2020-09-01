@@ -1,0 +1,44 @@
+<script>
+/*
+Ana, contadora de uma empresa bem conhecida, contabiliza os lucros de cada mês em uma matriz. Por exemplo, para o último semestre do ano passado registrou o seguinte:
+
+//Em julho ganhou $ 50, em agosto perdeu $ 12, etc.
+var lucroUltimoSemestre = [50, -12, 1000, 300, 200, 0];
+E ela acabou de nos perguntar: "posso saber o lucro de todo um semestre?"
+
+"Óbvio", nós dissemos, e escrevemos o seguinte código:
+
+function somaLucroSemestre(umSemestre) {
+  return umSemestre[0] + umSemestre[1] +
+        umSemestre[2] + umSemestre[3] +
+        umSemestre[4] + umSemestre[5];
+}
+"Muito Obrigada", Ana disse, e os lucros foram calculados usando a função que passamos para ela. Mas pouco tempo depois, ele voltou dizendo que também registrou os lucros do primeiro trimestre deste ano:
+
+//Em janeiro a empresa faturou $80, em fevereiro, $453, em março $1.000
+var lucrosPrimeiroTrimestre = [80, 453, 1000];
+E ela nos perguntou: _ "Você poderia usar essa função que você me deu para calcular os ganhos do primeiro trimestre?"_
+
+E estamos pensando .
+
+Tem algum problema na função somaLucroSemestre que escrevemos anteriormente? Funcionará com trimestres? E com quadrimestres?
+
+Experimente testar a função no terminal utilizando o console.log, fazendo diferentes impressões na tela!
+
+Lembre-se de testar no mínimo 3 vezes o console.*/
+
+
+var lucroUltimoSemestre = [50, -12, 1000, 300, 200, 0];
+
+function somaLucroSemestre(umSemestre) {
+    return umSemestre[0] + umSemestre[1] +
+    umSemestre[2] + umSemestre[3] +
+    umSemestre[4] + umSemestre[5];
+}
+
+console.log(somaLucroSemestre([50, -12, 1000, 300, 200, 0]));
+console.log(somaLucroSemestre([50, -12, 1000, 200, 0]));
+console.log(somaLucroSemestre([50, -12, 1000, 300, 0]));
+
+
+</script>

@@ -1,0 +1,32 @@
+<script>
+
+//Faça um Programa que leia três números e mostre o maior e o menor deles.
+
+function maiorDosTresNumero(x, y, z){
+    var maior = x
+
+    if(y > maior){
+        maior = y 
+    }
+    if(z > maior){
+        maior = z
+    }
+    return "O maior é o " + maior;
+
+}
+
+function menorDosTresNumeros(x, y, z){
+    var menor = x
+    if(y < menor){
+        menor = y 
+    }
+    if(z < menor){
+        menor = z
+    }
+    return "O menor é o " + menor;
+}
+
+console.log(maiorDosTresNumero(5, 3, 2))
+console.log(menorDosTresNumeros(5, 3, 2))
+
+</script>

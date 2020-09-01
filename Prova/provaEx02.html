@@ -1,0 +1,94 @@
+<script>
+
+/* 1- EX01- criar uma funcao que recebe as propiedades como parametro e retorna o objeto, Criar um objeto pessoa, com os atributos nome, idade e um objeto de
+ bens que esta pessoa possui, propiedades do bem nome, tipo e valor*/
+// criar uma função que recebe as propiedades do tipo bem e retorna o objeto do tipo bem
+// cria uma função que recebe as propiedades do tipo pessoa e retorna o objeto do tipo pessoa
+
+
+function Bens(nome, tipo, valor){
+    this.nome = nome;
+    this.tipo = tipo;
+    this.valor = valor;
+}
+
+function Pessoa(nome, idade, bens){
+    this.nome = nome;
+    this.idade = idade;
+    this.bens = bens;
+}
+
+
+// Bens
+var golf = new Bens('Golf', 'carro', 30000);
+var palio = new Bens('Palio', 'carro', 22000);
+var monark = new Bens('Monark', 'bicicleta', 600);
+var caloi = new Bens('CALOI', 'bicicleta', 600);
+var iphone = new Bens('iPhone', 'smartphone', 1600);
+var galaxy = new Bens('Galaxy j2', 'smartphone', 900);
+
+// Pessoas
+var joao = new Pessoa('Joao', 23, [golf, monark, palio]);
+var maria = new Pessoa('Maria', 33, [iphone, monark]);
+var mario = new Pessoa('Mairo', 56, [palio, galaxy]);
+var carlos = new Pessoa('Carlos', 24, [iphone, galaxy]);
+
+
+// Calcular o valor total de todos os bens das todas pessoas.
+
+var pessoas = [joao, maria, mario, carlos];
+
+function calculaValorTotalBens(pessoas){
+    var valorTotal = 0
+    pessoas.forEach(function(pessoa){
+        pessoa.bens.forEach(function(bem){
+            valorTotal = valorTotal + bem.valor;
+        })
+    })
+    return 'Valor total em bens é de R$ '+ valorTotal
+}
+
+console.log(calculaValorTotalBens(pessoas));
+
+
+// Calcular o valor total de cada categoria dos bens das pessoas, agrupar os tipos e apresentar o valor total para todas as pessoas.
+
+
+
+var pessoas = [joao, maria, mario, carlos];
+
+function calculaValorTotalDeCadaTipoDosBens(pessoas){
+    var tipoCarro = 0
+    var tipoBicicleta = 0
+    var tipoSmartphone = 0
+    pessoas.forEach(function(pessoa){
+        //console.log(pessoa.nome)
+        pessoa.bens.forEach(function(bem){
+            //console.log(bem.tipo);
+            //console.log(bem.valor);
+            if(bem.tipo == 'carro'){
+                tipoCarro = tipoCarro + bem.valor;
+            }
+            else if(bem.tipo == 'bicicleta'){
+                tipoBicicleta = tipoBicicleta + bem.valor;
+            }
+            else if(bem.tipo == 'smartphone'){
+                tipoSmartphone = tipoBicicleta + bem.valor;
+            }  
+        })
+    })
+    return {tipoCarro,
+            tipoBicicleta,
+            tipoSmartphone}
+}
+console.log(calculaValorTotalDeCadaTipoDosBens(pessoas))
+
+console.table(pessoas);
+
+
+
+
+
+
+
+</script>

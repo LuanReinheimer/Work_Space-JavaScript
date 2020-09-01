@@ -1,0 +1,28 @@
+<script>
+
+function pulaLinha(){
+    document.write('<br>');
+    document.write('<br>');
+}
+
+function pritn(frase){
+    document.write(frase);
+    pulaLinha()
+}
+
+
+// Faça uma funçao que mostre o fatorial de um numero.
+
+var n = parseInt(prompt('Digite um numero para saber o fatorial: '))
+
+function fatorial(n){
+    var fat = 1;
+    for(var c = n; c > 1; c--){
+        fat = fat * c
+    }
+    return fat
+}
+
+pritn(fatorial(n))
+
+</script>

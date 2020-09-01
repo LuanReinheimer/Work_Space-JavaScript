@@ -1,0 +1,23 @@
+<script>
+
+//Crie uma função que receba dois valores inteiros como parâmetro e exiba todos os números ímpares entre estes dois número (sem incluí-los).
+
+
+
+function valoresInt(valor1, valor2){
+    var valores = [];
+    for(var i = valor1; i <= valor2; i++){
+        if (i % 2 === 1){
+            valores.push(i)
+        }
+    }
+    return valores;
+
+}
+
+console.log(valoresInt(5, 65));
+
+
+
+
+</script>

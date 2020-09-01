@@ -1,0 +1,16 @@
+<script>
+
+    function produto(array = []){
+        var produto = 1
+        for (pos in array){
+            produto = produto * array[pos];
+        }
+        return produto;
+    }
+
+
+    var array = [1, 4, 7];
+    console.log(produto(array))
+
+
+</script>

@@ -1,0 +1,58 @@
+<script>
+
+
+// criar 3 objetos pessoas
+
+var pessoa1 = {
+    nome: 'Luan',
+    sobrenome: 'Reinheimer', 
+    idade: 23
+}
+
+var pessoa2 = {
+    nome: 'Ricardo',
+    sobrenome: 'Silva', 
+    idade: 32
+}
+
+var pessoa3 = {
+    nome: 'Paulo',
+    sobrenome: 'Oliveira', 
+    idade: 46
+}
+
+
+function imprimeChaves(pessoa){
+    return console.log(Object.keys(pessoa))
+}
+
+
+function imprimeValores(pessoa){
+    return console.log(Object.values(pessoa))
+}
+
+
+function mostraPessoasUmaAUma(usuario){
+    for (var posisao in usuario){
+        console.log(posisao +":"+ usuario[posisao])
+    }
+}
+
+
+function imprimeNomeCompleto(usuario){
+    var nome = usuario.nome;
+    var sobrenome = usuario.sobrenome
+    return nome + ' ' + sobrenome
+}
+
+
+console.log(imprimeNomeCompleto(pessoa1))
+
+console.log(mostraPessoasUmaAUma(pessoa3))
+
+
+console.log(imprimeChaves(pessoa1))
+console.log(imprimeValores(pessoa1))
+
+
+</script>

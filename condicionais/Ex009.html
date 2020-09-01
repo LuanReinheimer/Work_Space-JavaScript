@@ -1,0 +1,28 @@
+<script>
+
+// Informar se é par ou impar o numero informado pelo usuario atraves de um input.
+
+function print(frase){
+    document.write(frase)
+    pulaLinha()
+}
+
+var num = parseInt(prompt("Digite um numero; "))
+
+
+function parOuImpar(number){
+    if( number % 2 == 0 ){
+        print('PAR');
+}else{
+    print('IMPAR')
+    }
+}
+
+print(parOuImpar(num));
+
+
+
+
+
+
+</script>

@@ -1,0 +1,62 @@
+<script>
+
+  function pulaLinha(){
+    document.write("<br>");
+    document.write("<br>");
+}
+
+
+function print(frase){
+    document.write(frase)
+    pulaLinha()
+}
+
+
+// Aprendendo a usar os metodos dos objetos em JS.
+
+var pessoa = {
+    primeiroNome: "Luan",
+    sobreNome: "Reinheimer",
+    id : 5566,
+
+    // Metodos deste objeto
+    NomeCompleto: function(){
+      return this.primeiroNome + " " + this.sobreNome
+    }
+};
+
+
+// adicionando itens e objetos no meu objeto
+pessoa.ano = 2020;
+
+pessoa.hobbies = ['musica', 'programar', 'viajar', 'andar de moto'];
+
+pessoa.competencias = {
+  linguagens: ['Js', 'Python', 'JAVA', 'HTML', 'CSS'],
+  cursos: ['alura', 'udemy']
+
+}
+
+// Juntando dois objetos (merge de objetos)
+
+var pessoa1 = {
+  nome: "lucas",
+  idade: 23
+}
+
+var pessoa2 = {
+  nome1: "luan",
+  idade1: 24
+}
+
+var juntandoObjetos = Object.assign({}, pessoa1, pessoa2); // desta maneira criara um novo objeto com os dois objetos passados
+
+
+// imprimir objeto
+
+console.log(juntandoObjetos)
+console.log(pessoa)
+console.log(pessoa.ano)
+console.log(pessoa.NomeCompleto())
+
+</script>

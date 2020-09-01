@@ -1,0 +1,43 @@
+<script>
+
+// informar o maior e o menor e a soma total do array e quais são divisiveis por 2.
+
+
+
+var array = [5, 6, 7, 67, 4, 3, 5, 6, 12, 33, 67, 1, 56, 3];
+
+
+
+
+function somaArray(array){
+    var soma = 0
+    for(pos in array){
+        soma += array[pos]
+    }
+    return soma
+}
+
+function retornaDivisivel(array){
+    var divisiveis = []
+    for(var pos = 0; pos < array.length; pos++){
+        if(array[pos] % 2 == 0){
+        divisiveis.push(array[pos])
+        }
+    }
+    return divisiveis;
+}
+
+function devolveMaior(array){
+    return "O numero maior desse array é " + Math.max(...array)  
+}
+
+function devolveMenor(array){
+    return "O numero menor desse array é " + Math.min(...array); 
+}
+
+console.log(devolveMenor(array))
+console.log(devolveMaior(array))
+console.log("Os divisiveis são " + retornaDivisivel(array))
+console.log("A soma do array é " + somaArray(array))
+
+</script>

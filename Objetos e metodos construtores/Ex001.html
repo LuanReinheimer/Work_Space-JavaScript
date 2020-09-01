@@ -1,0 +1,20 @@
+<script>
+
+// Cria um objeto endereco que contem: RUA, CIDADE, CEP e exivir Endereco(endereco)
+
+
+var endereco = {
+    rua: 'a',
+    cidade: 'b',
+    cep: 'c'
+};
+
+function exibirEnderecos(endereco){
+    for (let chave in endereco){
+        console.log(chave,endereco[chave]);
+    }
+}
+
+console.log(exibirEnderecos(endereco))
+
+</script>

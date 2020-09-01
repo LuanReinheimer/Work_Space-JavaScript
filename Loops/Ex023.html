@@ -1,0 +1,25 @@
+<script>
+
+
+    function pulaLinha(){
+        document.write('<br>');
+        document.write('<br>');
+    }
+
+    function print(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+
+var  array = [];
+
+for(var pos = 0; pos <= 10; pos++){
+    var num = parseInt(prompt("Digite um numero: "))
+    array.push(num)
+}
+print(array.sort())
+
+
+
+</script>

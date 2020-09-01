@@ -1,0 +1,31 @@
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+    
+    function print(frase) {
+    
+        document.write(frase);
+        pulaLinha();
+    }
+
+
+//Faça um programa que leia 5 números e informe o maior número.
+var maior = -9999 
+for(var i = 0; i <= 5; i ++){
+    var num = prompt("informe um numero: ");
+    if(num > maior){
+        maior = num;
+    }
+    
+}
+print("O maior é " + maior);
+
+
+
+
+
+</script>

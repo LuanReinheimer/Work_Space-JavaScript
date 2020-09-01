@@ -1,0 +1,45 @@
+<script>
+
+    /* Crie uma função que receba um objeto no formato abaixo…
+    
+    var cliente = {
+        nome: "Maria das Gracas Xuxa Meneguel",
+        email: "xuxa@666.com",
+        telefone: "55 11 666-6566",
+        rua: "rua dos baixinhos",
+        numero: 666,
+        bairro: "Pinheiros",
+        cidade: 'Sao Paulo',
+        uf:"SP"
+     };
+     E retorne uma string com o seguinte formato: O cliente Maria das Gracas Xuxa Meneguel mora em Sao Paulo, SP.
+    */
+
+
+
+    function Cliente(nome, email, telefone, rua, numero, bairro, cidade, uf) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.rua = rua;
+        this.numero = numero;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.uf = uf;
+    }
+
+
+    var xuxa = new Cliente("Maria das Gracas Xuxa Meneguel", "xuxa@666.com", "55 11 666-6566", "rua dos baixinhos", 666, "Pinheiros", 'Sao Paulo', "SP")
+
+    function retorna(xuxa){
+        return "O(a)" + xuxa.nome + 'mora em ' + xuxa.cidade + ' , ' + xuxa.uf; 
+    }
+
+
+    console.log(retorna(xuxa))
+
+
+
+
+
+</script>

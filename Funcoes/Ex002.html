@@ -1,0 +1,29 @@
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+    
+    
+    function print(frase){
+        document.write(frase)
+        pulaLinha()
+    }
+
+
+//Faça um programa, com uma função que necessite de um argumento. A função retorna o valor de caractere ‘P’, se seu argumento for positivo, e ‘N’, se seu argumento for zero ou negativo
+
+
+function ArgNegativoOuPositivo(num){
+    if(num >= 0){
+        return 'p';
+    }else{
+        return 'n';
+    }
+}
+
+print(ArgNegativoOuPositivo(-2));
+
+
+</script>

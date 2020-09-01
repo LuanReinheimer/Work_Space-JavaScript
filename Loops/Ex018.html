@@ -1,0 +1,34 @@
+<script>
+
+
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function print(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+// Faça uma função que some os numeros de um array
+
+function somaDoArray(arrayPassado = []){
+    var soma = 0
+    for( var i = 0; i < arrayPassado.length; i++){
+        soma = soma + arrayPassado[i];
+    }
+    return soma
+}
+
+
+var array = [2,3,4,5,10,29];
+
+print(somaDoArray(array));
+
+
+
+
+
+
+
+</script>

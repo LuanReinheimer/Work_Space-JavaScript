@@ -1,0 +1,55 @@
+<script>
+
+
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+    
+    
+    function print(frase){
+        document.write(frase)
+        pulaLinha()
+    }
+
+    // Arrays são geralmente descritas como "lista de objetos"; elas são basicamente objetos que contem múltiplos valores armazenados em uma lista
+    // Principais funcoes internas de um Array em JS.
+
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    fruits.pop();             // O pop()método remove o último elemento de uma matriz
+
+    fruits.join('-')          // O join() método também une todos os elementos da matriz em uma sequência, mas além disso, você pode especificar o separador
+
+    fruits.toString()         // este método também une todos os elementos da matriz em uma sequência deixando como se fosse uma String.
+
+    fruits.push("Kiwi");      // O push()método adiciona um novo elemento a uma matriz (no final):
+
+    fruits.shift();           // O shift()método remove o primeiro elemento da matriz e "muda" todos os outros elementos para um índice mais baixo.
+
+    fruits.unshift("Lemon");  // O unshift()método adiciona um novo elemento a uma matriz (no início) e "desvia" elementos antigos:
+
+    print(fruits.length);     // Este metodo retorna o tamanho do array.
+
+    delete fruits[0];         // Altera o primeiro elemento em frutas para indefinido.
+
+    fruits.sort();            // O sort()método classifica uma matriz em ordem alfabética:
+
+    fruits.reverse();         // O reverse()método reverte os elementos em uma matriz, Você pode usá-lo para classificar uma matriz em ordem decrescente:
+
+    var myArray = fruits.split(' , ') // dividir isto em cada vírgula
+    
+    fruits.toString();  // Transforma todo o array em string.
+
+    // 
+    function devolveMaior(array){
+        return "O numero maior desse array é " + Math.max(...array)  
+    }
+    
+    function devolveMenor(array){
+        return "O numero menor desse array é " + Math.min(...array); 
+    }
+    
+
+</script>

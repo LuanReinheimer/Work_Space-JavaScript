@@ -1,0 +1,30 @@
+<script>
+//Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.
+
+function pulaLinha() {
+
+    document.write("<br>");
+    document.write("<br>");
+}
+
+function print(frase) {
+
+    document.write(frase);
+    pulaLinha();
+}
+
+var usuario = prompt("Digite seu user: ")
+var senha = prompt("Digite sua senha: ")
+
+while (usuario == senha){
+    print("ERRO: o usuário não pode ser igual a senha, tente novamente")
+	var usuario = prompt("Digite seu user: ")
+    var senha = prompt("Digite sua senha: ")
+}
+
+print("cadastrado efetuado com sucesso")
+	
+
+
+
+</script>

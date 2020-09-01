@@ -1,0 +1,81 @@
+<script>
+
+// Criar um Array de objetos com 4 pessoas e mostar qual objeto pessoa do Array tem a maior idade e a menor idade.
+
+var pessoas = [{
+    nome: 'luan',
+    sobreNome: 'reinheimer', 
+    idade: 23,
+    NomeCompleto: function(){
+        return this.primeiroNome + " " + this.sobreNome }
+},
+
+{
+    nome: 'paulo',
+    sobreNome:'santos', 
+    idade: 22,
+    NomeCompleto: function(){
+        return this.primeiroNome + " " + this.sobreNome }
+},
+
+{
+    nome: 'Jorge',
+    sobreNome:'oliveira',
+    idade: 37,
+    NomeCompleto: function(){
+        return this.primeiroNome + " " + this.sobreNome }
+}, 
+
+{
+    nome: 'jose',
+    sobreNome:'silva', 
+    idade: 10,
+    NomeCompleto: function(){
+        return this.primeiroNome + " " + this.sobreNome }
+}]
+
+function mostraPessoasUmaAUma(usuario){
+    for (var posisao in pessoas){
+        console.log(pessoas[posisao])
+    }
+}
+
+function imprimeChaves(usuario){
+    return console.log(Object.keys(usuario))
+}
+
+function ImprimeMaiorIdades(usuario){
+    var idades = [] 
+    for(var i = 0; i < usuario.length; i++){
+        idades.push(usuario[i].idade)
+    }
+    return "A pessoa com a maior idade é " + Math.max(...idades);
+}
+
+function ImprimeMenorIdades(usuario){
+    var idades = [] 
+    for(var i = 0; i < usuario.length; i++){
+        idades.push(usuario[i].idade)
+    }
+    return "A pessoa com a menor idade é " + Math.min(...idades);   
+}
+
+function ImprimeIdadesENome(usuario){
+    var idadesENome = [] 
+    for(var i = 0; i < usuario.length; i++){
+        idadesENome.push(usuario[i].nome)
+        idadesENome.push(usuario[i].idade)
+    }
+    return idadesENome
+}
+
+
+console.log(mostraPessoasUmaAUma(pessoas))
+console.log(ImprimeMaiorIdades(pessoas))
+console.log(ImprimeMenorIdades(pessoas))
+console.log(ImprimeIdadesENome(pessoas))
+
+
+
+
+</script>

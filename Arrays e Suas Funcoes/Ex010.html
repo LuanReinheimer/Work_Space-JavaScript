@@ -1,0 +1,28 @@
+<script>
+/* Vamos terminar essa sessão com um desafio 
+
+Queremos escrever uma função naipeDeTruco, que dado um naipe, devolva uma lista de strings, uma por cada carta desse naipe seguindo as cartas do truco:
+
+ naipeDeTruco("espadas")
+["1 de espadas", "2 de espadas", "3 de espadas" ..., "12 de espadas"]
+Lembre-se que as cartas de truco incluem todas as cartas numeradas de 1 a 12, com exceção das cartas 8 e 9
+
+escreva a função naipeDeTruco*/
+
+
+function naipeDeTruco(naipe) {
+    let resultado = [];
+    for (var numCarta = 0; numCarta <= 12; numCarta++){
+        if(numCarta == 8 ){
+            numCarta = numCarta +1
+        }else {
+      resultado.push(numCarta + " de " + naipe);
+    }
+  }
+  return resultado;
+}
+
+console.log(naipeDeTruco("Espadas"));
+
+
+</script>
